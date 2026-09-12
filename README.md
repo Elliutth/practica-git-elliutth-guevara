@@ -9,48 +9,48 @@ __*GitHub → Repositorio local*__
 # __*1.0.- Crear el repositorio local*__
 __1.1.-__ para crear el repositorio local lo primero que debemos hacer es entrar en powershell y con el comando mkdir crear una carpeta con el nombre de nuestro proyecto en mi caso ***"practica-git-elliutth-guevara"***.
 
-__1.2.-__ una vez creada la carpeta debemos ingresar en ella desde la terminal para esto debemos utilizar el comando cd "nombre de la carpera".
+__1.2.-__ una vez creada la carpeta debemos ingresar en ella desde la terminal para esto debemos utilizar el comando `cd "nombre de la carpera"`.
 
-__1.3.-__ ahora que estamos dentro de la carpeta debemos inicializar el repositorio de git para esto es nesesario utilisar el comando git init.
+__1.3.-__ ahora que estamos dentro de la carpeta debemos inicializar el repositorio de git para esto es nesesario utilisar el comando `git init`.
 
-__1.4.-__ ahora con el comando git branch -M main estableceremos main como la rama principal.
+__1.4.-__ ahora con el comando `git branch -M main` estableceremos main como la rama principal.
 
 __1.5.-__ ahora nesesitamos 2 archivos uno con el nombre datos.txt y otro con el nombre README.md que casualmente es este archivo que estas leyendo para crearlos podemos hacerlo de la forma tradicional o con el comando `New-Item -Path "datos.txt" -ItemType File` en el caso de el otro archivo cambiamos datos.txt por README.md en el comando.
 
 __1.6.-__ ahora podemos comenzar a editar el archivo .txt en su contenido escribi "git es una herramienta que funciona en conjunto con github para la creacion de repositorios y control de versiones".
 # __*2.0.-Registra los primeros cambios*__
-__2.1.-__ con el comando git status verificamos el estado de el repositorio asi veremos si hay archivos nuevos para añadir a la staging area.
+__2.1.-__ con el comando `git status` verificamos el estado de el repositorio asi veremos si hay archivos nuevos para añadir a la staging area.
 
-__2.2.-__ ahora para añadir esos archivos a la staging area utilizamos el comando git add -A para añadir todos los nuevos archivos.
+__2.2.-__ ahora para añadir esos archivos a la staging area utilizamos el comando `git add -A` para añadir todos los nuevos archivos.
 
-__2.3.-__ con git status volvemos a verificar el estado del repositorio y veremos ambos archivos de color verde lo que quiere decir que estan listos para realizar un commit.
+__2.3.-__ con `git status` volvemos a verificar el estado del repositorio y veremos ambos archivos de color verde lo que quiere decir que estan listos para realizar un commit.
 
-__2.4.-__ ahora tenemos todo listo para realizar el primer commit para esto usamos el comando git commit -m "primer commit".
+__2.4.-__ ahora tenemos todo listo para realizar el primer commit para esto usamos el comando `git commit -m "primer commit"`.
 
 # __*3.0.-crear un repositorio en github*__
-__3.1.-__ crear un repositorio en github con el mismo nombre que el repositorio local el repositorio lo pondremos publico y mantendremos README. gitignore Licencia     inactivos.
+__3.1.-__ crear un repositorio en github con el mismo nombre que el repositorio local el repositorio lo pondremos publico y mantendremos README. gitignore Licencia inactivos.
 
-__3.2.-__ vincularemos el repositorio de github con el repositorio local para eso en github nos da 3 opciones yo utilize ssh y debemos usar el comando git remote add origin "el url que te da la opcion ssh" en la powershell, en mi caso queda:  
+__3.2.-__ vincularemos el repositorio de github con el repositorio local para eso en github nos da 3 opciones yo utilize ssh y debemos usar el comando `git remote add origin "el url que te da la opcion ssh"` en la powershell, en mi caso queda:  
  __`git remote add origin git@github.com:Elliutth/practica-git-elliutth-guevara.git`__.
 
-__3.3.-__ con git remote -v confirmaremos que el repositorio se ha vinculado correctamente.
+__3.3.-__ con `git remote -v` confirmaremos que el repositorio se ha vinculado correctamente.
 
 __3.4.-__ Ahora enviaremos el repositorio a github por primera vez utilizando el comando git push -u origin main y podemos entrar a github a confirmar que los cambios se realizaron.
 
 # __*4.0.0-realiza cambios desde github y desde el repositorio local*__
 __4.1.1.-__ dede github realiza un cambio en el archibo datos.txt agrega una nueva linea que diga "este archivo fue modificado desde github" y guarda los cambios.
 
-__4.1.2.-__ regresa al repositorio local en powershell y descarga los cambios para eso usa el comando git pull origin main, ahora puedes verificar los cambios en el archivo.
+__4.1.2.-__ regresa al repositorio local en powershell y descarga los cambios para eso usa el comando `git pull origin main`, ahora puedes verificar los cambios en el archivo.
 
 __4.2.1.-__ ahora realiza un cambio desde el repositorio local en el mismo archivo datos.txt ahora añade una line que diga "este archivo fue editado desde el repositorio local".
 
 __4.2.2.-__ ahora en powershell verifica el estado del repositorio con git status y aparecera que el archivo datos.txt fue editado.
 
-__4.2.3.-__ añadimos los cambios con git add -A.
+__4.2.3.-__ añadimos los cambios con `git add -A`.
 
-__4.2.4.-__ y procedemos a hacer un nuevo commit con el comando git commit -m "Actualización desde repositorio local".
+__4.2.4.-__ y procedemos a hacer un nuevo commit con el comando `git commit -m "Actualización desde repositorio local"`.
 
-__4.2.5.-__ con git push enviamos los cambios de regreso a github una ves enviados los cambios podemos ir a github a verificar que el cambio se aya realizado.
+__4.2.5.-__ con `git push` enviamos los cambios de regreso a github una ves enviados los cambios podemos ir a github a verificar que el cambio se aya realizado.
 # __*5.-comandos de git y breve explicacion*__
 ```bash
 git init 
